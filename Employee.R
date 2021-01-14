@@ -143,7 +143,7 @@ tab
 confusionMatrix(test$Transport,data=pred,positive="1")
 varImp(knn_fit)
 
-#Naïve Bayes with Smote:
+#NaÃ¯ve Bayes with Smote:
 #Preparing the data and splitting it into 70:30 ratio.
 ca=read.csv("cars.csv",header = T)
 ca$Transport=ifelse(ca$Transport==2,0,ifelse(ca$Transport=="P",0,1))
@@ -263,7 +263,7 @@ pred=predict(bag,newdata=test,type="class")
 confusionMatrix(test$Transport,data=pred,positive = "1")
 varImp(bag)
 
-#Adaptive Boosting without Smote:
+#Gradient Boosting without Smote:
 ca=read.csv("cars.csv",header = T)
 ca=na.omit(ca)
 ca$Transport=ifelse(ca$Transport==2,0,ifelse(ca$Transport=="P",0,1))
